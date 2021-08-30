@@ -8,7 +8,7 @@ import orderRoutes from "./routes/orderRoutes.js"
 import uploadRoutes from "./routes/uploadRoutes.js"
 import {errorHandler} from "./middlewares/error.js"
 import path from "path"
-import morgan from "morgan"
+// import morgan from "morgan"
 // dotenv.config()
 const app  = express()
 
@@ -18,7 +18,7 @@ connectDb()
 app.use(express.json())
 
 
-app.use(morgan("dev"))
+// app.use(morgan("dev"))
 app.use("/api/users/",userRoutes )
 app.use("/api/products/", productRoutes)
 app.use("/api/categories/", categoriesRoutes)
