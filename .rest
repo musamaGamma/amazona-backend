@@ -1,0 +1,80 @@
+POST http://localhost:5000/api/users/register HTTP/1.1
+Content-Type: application/json
+
+  {
+    "name": "name",
+    "email": "johan@email.co",
+    "password": "12345"
+}
+###
+POST http://localhost:5000/api/users/login HTTP/1.1
+Content-Type: application/json
+
+  {
+    "email": "johan0373@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/api/users HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDQ0M2NjYjVlMGU0NThkODIxZGFlYiIsImlhdCI6MTYyNzY3MjY4OSwiZXhwIjoxNjMwMjY0Njg5fQ.GdTn41VVN9fAcQOCKHFGKB3EeXnR9nEXFN92BMeYp-A
+
+###
+ GET http://localhost:5000/api/products HTTP/1.1
+
+###
+ POST http://localhost:5000/api/products HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDQ0M2NjYjVlMGU0NThkODIxZGFlYiIsImlhdCI6MTYyODUzNzg5OSwiZXhwIjoxNjMxMTI5ODk5fQ.aPJ2E7_TPZ1qIRwmZ31E5tps0jMQPkWGxQbN8dpIY3E
+Content-Type: application/json
+
+ 
+ {
+   "name": "sample name",
+      "price": 0,
+      "image": "images/sample.jpg",
+      "brand": "sample brand",
+      "category": "61125aaf8443757534dae45c",
+      "countInStock": 0,
+      "numReviews": 0,
+     "description": "sample description"
+ }
+
+###
+GET http://localhost:5000/api/products HTTP/1.1
+###
+GET http://localhost:5000/api/products/me HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDQ1NmI0YjU3MTUwODkyMDJjMmRiMiIsImlhdCI6MTYyOTI3NzQxNiwiZXhwIjoxNjMxODY5NDE2fQ.Bb9FdtDz7ojqOR8lnbHvRWFIsuIplmhJO_mvC-UUeDQ
+###
+DELETE http://localhost:5000/api/products/611907d9bc1d980d440ef049/reviews HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDQ1NmI0YjU3MTUwODkyMDJjMmRiMiIsImlhdCI6MTYyOTIyMzI4OCwiZXhwIjoxNjMxODE1Mjg4fQ.UJcXZCHC2ibqBPGl30JrcOOQ3FNFf14JPhDaoaZ8oic
+
+
+
+###
+PUT http://localhost:5000/api/products/611cec2f61a66c7578e745b7 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDQ1NmI0YjU3MTUwODkyMDJjMmRiMiIsImlhdCI6MTYyOTc0NTEzMSwiZXhwIjoxNjMyMzM3MTMxfQ.w3hrZKpkfBRpSisGfwpZoNXdRTlceMJb3bPEehJZ704
+
+{
+  "countInStock": 
+}
+
+
+
+###
+DELETEhttp://localhost:5000/api/products/deleteAll HTTP/1.1
+
+###
+POST http://localhost:5000/api/categories HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMDQ0M2NjYjVlMGU0NThkODIxZGFlYiIsImlhdCI6MTYyODU5MjcwMiwiZXhwIjoxNjMxMTg0NzAyfQ.EQWnTfqWzDwLDaJmQDEtVmSfu3W2kuqzUHaeYk6dYVw
+Content-Type: application/json
+ 
+ {
+   "name": "Women's clothing"
+ }
+
+###
+GET http://localhost:5000/api/categories HTTP/1.1
+
+###
+DELETE http://localhost:5000/api/categories/deleteAll HTTP/1.1
