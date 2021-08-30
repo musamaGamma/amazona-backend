@@ -5,8 +5,8 @@ import {protect} from "../middlewares/auth.js";
 import Stripe from "stripe"
 import { v4 as uuidv4 } from 'uuid'
 
-import dotenv from "dotenv"
-dotenv.config()
+// import dotenv from "dotenv"
+// dotenv.config()
 
 const stripe = new Stripe(process.env.STRIPE_SECRET)
 const router = express.Router();

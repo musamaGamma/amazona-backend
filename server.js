@@ -1,6 +1,6 @@
 import express from "express"
 import connectDb from "./config/db.js"
-import dotenv from "dotenv"
+// import dotenv from "dotenv"
 import userRoutes from "./routes/usersRoute.js"
 import productRoutes from "./routes/productsRoutes.js"
 import categoriesRoutes from "./routes/categoriesRoutes.js"
@@ -9,7 +9,7 @@ import uploadRoutes from "./routes/uploadRoutes.js"
 import {errorHandler} from "./middlewares/error.js"
 import path from "path"
 import morgan from "morgan"
-dotenv.config()
+// dotenv.config()
 const app  = express()
 
 //connect to database
