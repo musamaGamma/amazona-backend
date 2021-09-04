@@ -7,6 +7,7 @@ import categoriesRoutes from "./routes/categoriesRoutes.js"
 import orderRoutes from "./routes/orderRoutes.js"
 import uploadRoutes from "./routes/uploadRoutes.js"
 import {errorHandler} from "./middlewares/error.js"
+import cors from "cors"
 import path from "path"
 // import morgan from "morgan"
 // dotenv.config()
@@ -15,6 +16,7 @@ const app  = express()
 //connect to database
 connectDb()
 
+app.use(cors("*"))
 app.use(express.json())
 
 
